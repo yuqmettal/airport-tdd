@@ -1,5 +1,9 @@
-package com.devsu.airport;
+package com.devsu.airport.flight;
 
+import com.devsu.airport.flight.BusinessFlight;
+import com.devsu.airport.flight.EconomyFlight;
+import com.devsu.airport.flight.Flight;
+import com.devsu.airport.flight.Passenger;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;

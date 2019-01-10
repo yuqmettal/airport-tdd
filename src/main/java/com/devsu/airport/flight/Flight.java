@@ -1,4 +1,4 @@
-package com.devsu.airport;
+package com.devsu.airport.flight;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,7 +6,7 @@ import java.util.List;
 
 public abstract class Flight {
 
-    private String id;
+    private final String id;
     List<Passenger> passengersList = new ArrayList<>();
 
     Flight(String id) {

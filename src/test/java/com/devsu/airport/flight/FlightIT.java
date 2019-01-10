@@ -1,6 +1,9 @@
-package com.devsu.airport;
+package com.devsu.airport.flight;
 
 import com.devsu.airport.clients.CommentClient;
+import com.devsu.airport.flight.BusinessFlight;
+import com.devsu.airport.flight.Flight;
+import com.devsu.airport.flight.FlightComment;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,12 +1,15 @@
-package com.devsu.airport;
+package com.devsu.airport.clients;
 
 import com.devsu.airport.clients.CommentClient;
+import com.devsu.airport.flight.BusinessFlight;
+import com.devsu.airport.flight.Flight;
+import com.devsu.airport.flight.FlightComment;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-public class CommentTest {
+class CommentTest {
 
     @Test
     void getCommentFromService() {
@@ -16,7 +19,6 @@ public class CommentTest {
         FlightComment comment = service.getComment(flight);
 
         Assertions.assertEquals(1, comment.getId());
-
     }
 
     @Test
@@ -27,6 +29,5 @@ public class CommentTest {
         List<FlightComment> comments = service.getCommentList(flight);
 
         Assertions.assertTrue(comments.size() > 0);
-
     }
 }

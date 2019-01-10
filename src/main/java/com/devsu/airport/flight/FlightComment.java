@@ -1,4 +1,4 @@
-package com.devsu.airport;
+package com.devsu.airport.flight;
 
 public class FlightComment {
 

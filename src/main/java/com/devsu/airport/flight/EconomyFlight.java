@@ -1,4 +1,4 @@
-package com.devsu.airport;
+package com.devsu.airport.flight;
 
 class EconomyFlight extends Flight {
     EconomyFlight(String id) {
