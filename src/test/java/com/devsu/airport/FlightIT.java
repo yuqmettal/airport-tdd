@@ -1,4 +1,4 @@
-package com.marco.airport;
+package com.devsu.airport;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -8,14 +8,15 @@ import org.mockito.MockitoAnnotations;
 
 import static org.mockito.Mockito.when;
 
-public class FlightIT {
+class FlightIT {
     @Mock
     private CommentService commentService = null;
 
     @BeforeEach
-    public void setup() {
+    void setup() {
         MockitoAnnotations.initMocks(this);
     }
+
     @Test
     void testFlightPassengerCommentsIT() {
         Passenger passenger = new Passenger("Marco", false);
@@ -25,7 +26,7 @@ public class FlightIT {
 
         //List<FlightComment> commentList = commentService.getCommentList(passenger);
 
-        Assertions.assertTrue(commentService.getCommentList(businessFlight) == null);
+        Assertions.assertNull(commentService.getCommentList(businessFlight));
 
     }
 }

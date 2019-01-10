@@ -1,6 +1,6 @@
-package com.marco.airport;
+package com.devsu.airport;
 
-public class FlightComment {
+class FlightComment {
 
     private int id;
     private int userId;

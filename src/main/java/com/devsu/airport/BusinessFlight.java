@@ -1,7 +1,7 @@
-package com.marco.airport;
+package com.devsu.airport;
 
-public class BusinessFlight extends Flight {
-    public BusinessFlight(String id) {
+class BusinessFlight extends Flight {
+    BusinessFlight(String id) {
         super(id);
     }
 

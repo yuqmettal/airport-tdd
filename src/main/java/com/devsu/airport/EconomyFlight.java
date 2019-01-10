@@ -1,7 +1,7 @@
-package com.marco.airport;
+package com.devsu.airport;
 
-public class EconomyFlight extends Flight {
-    public EconomyFlight(String id) {
+class EconomyFlight extends Flight {
+    EconomyFlight(String id) {
         super(id);
     }
 
