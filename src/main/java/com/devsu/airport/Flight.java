@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-abstract class Flight {
+public abstract class Flight {
 
     private String id;
     List<Passenger> passengersList = new ArrayList<>();
@@ -13,7 +13,7 @@ abstract class Flight {
         this.id = id;
     }
 
-    String getId() {
+    public String getId() {
         return id;
     }
 

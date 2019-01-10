@@ -1,16 +1,20 @@
 package com.devsu.airport;
 
+import com.devsu.airport.clients.CommentClient;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.mockito.Mockito.when;
 
 class FlightIT {
     @Mock
-    private CommentService commentService = null;
+    private CommentClient commentService = null;
 
     @BeforeEach
     void setup() {
@@ -19,14 +23,15 @@ class FlightIT {
 
     @Test
     void testFlightPassengerCommentsIT() {
-        Passenger passenger = new Passenger("Marco", false);
         Flight businessFlight = new BusinessFlight("1");
 
-        when(commentService.getCommentList(businessFlight)).thenReturn(null);
+        List<FlightComment> comments = new ArrayList<>();
+        comments.add(new FlightComment(1,1,"Flight # 12", "OK"));
+        comments.add(new FlightComment(2,1,"Flight # 11", "OK"));
+        comments.add(new FlightComment(3,4,"Flight # 2", "OK"));
 
-        //List<FlightComment> commentList = commentService.getCommentList(passenger);
+        when(commentService.getCommentList(businessFlight)).thenReturn(comments);
 
-        Assertions.assertNull(commentService.getCommentList(businessFlight));
-
+        Assertions.assertEquals(3,commentService.getCommentList(businessFlight).size());
     }
 }
