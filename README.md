@@ -34,5 +34,5 @@ the userId of the service correspond to the Flight id.
 
 * We must applying TDD.
 * We must create unit tests for the functionality.
-* Se must create integration tests for comments REST service.
+* We must create integration tests for comments REST service.
 * We must use the maven surefire and maven safefail plugins for unit and integration tests repectively.
